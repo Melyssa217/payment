@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods and Social Media Links</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { padding: 20px; }
+        .section { margin-bottom: 20px; }
+        .payment-method, .social-media { display: flex; align-items: center; margin-bottom: 10px; }
+        .icon { width: 30px; height: 30px; margin-right: 10px; }
+        .link { text-decoration: none; color: #007BFF; font-weight: bold; }
+        .link:hover { text-decoration: underline; }
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .collapsible {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment Methods and Social Media Links</h1>
+            <p>Choose your preferred payment method or follow us on social media.</p>
+        </header>
+
+        <button class="collapsible">Payment Methods</button>
+        <div class="content">
+            <div class="payment-method">
+                <img src="cashapp-icon.png" alt="Cash App" class="icon">
+                <button class="cta-button" onclick="window.location.href='https://cash.app'">Pay with Cash App</button>
+            </div>
+            <div class="payment-method">
+                <img src="zelle-icon.png" alt="Zelle" class="icon">
+                <button class="cta-button" onclick="window.location.href='https://www.zellepay.com'">Pay with Zelle</button>
+            </div>
+            <div class="payment-method">
+                <img src="venmo-icon.png" alt="Venmo" class="icon">
+                <button class="cta-button" onclick="window.location.href='https://www.venmo.com'">Pay with Venmo</button>
+            </div>
+        </div>
+
+        <button class="collapsible">Social Media Links</button>
+        <div class="content">
+            <div class="social-media">
+                <img src="facebook-icon.png" alt="Facebook" class="icon">
+                <button class="cta-button" onclick="window.location.href='https://www.facebook.com'">Facebook</button>
+            </div>
+            <div class="social-media">
+                <img src="twitter-icon.png" alt="Twitter" class="icon">
+                <button class="cta-button" onclick="window.location.href='https://www.twitter.com'">Twitter</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Contact us at: info@example.com</p>
+            <p><a href="privacy.html" class="link">Privacy Policy</a> | <a href="terms.html" class="link">Terms of Service</a></p>
+        </footer>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
